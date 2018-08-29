@@ -27,9 +27,12 @@ find_package(Qt5Widgets)
 add_executable(cloud_viewer main.cpp)
 
 
+
     # Additional Dependencies
     # [Linker]>[Input]>[Additional Dependencies]
     target_link_libraries( cloud_viewer ${PCL_LIBRARIES} Qt5::Widgets )
+    #target_link_libraries( cloud_viewer ${PCL_COMMON_LIBRARIES} Qt5::Widgets )
+    target_link_libraries( cloud_viewer pthread)
 
 #endif()
 
